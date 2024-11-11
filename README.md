@@ -5,8 +5,6 @@ As part of joining our engineering, we share this simple challenge with you.
 
 Happy coding!
 
-## Web Card Transactions
-
 The purpose of this task is to build a card and transactions overview page. The user should be able to select one of the cards, see it's transactions and be able to filter the transactions based on the amount.
 
 Please install dependencies using `yarn`.
@@ -18,6 +16,8 @@ We provided a fake ApiClient for you that fetches the data. If you want to impro
 You can always extend with more data if you feel like it.
 
 If you feel like the design does not make sense, adjust it and note how you would communicate your suggestions with a designer.
+
+## Web Card Transactions
 
 ### [Click here to see the Video Review]([LINK_TO_LOOM_VIDEO])
 
@@ -35,18 +35,33 @@ If you feel like the design does not make sense, adjust it and note how you woul
 - Checked for performance using Lighthouse and made it accessible
 - Prepared and deployed the project using Netlify
 
-### [Click here to see the Live Demo]([https://webcardtransactions.netlify.app/])
+### [Click here to see the Live Demo](https://webcardtransactions.netlify.app/)
 
 ## Screenshots
 
-![alt text](assets/app_screen.png)
+#### Live Demo
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/user-attachments/assets/a721f4bc-c825-406e-b31d-9ed558110187" alt="Live-demo-1" style="width: 48%;"/>
+  <img src="https://github.com/user-attachments/assets/acf2156f-faff-416c-a9c2-b98768f29ad8" alt="Live-demo-2" style="width: 48%;"/>
+</div>
+
+#### Initial TLDraw Design
+![TLDraw design](https://github.com/user-attachments/assets/9411c1a8-b971-4e38-ac63-8da85bec52d2)
+
+#### Test Coverage
+![test coverage](https://github.com/user-attachments/assets/085e918d-d823-4515-b97b-d6161c06d2b4)
+
+#### Lighthouse Report
+![lighthouse performance report](https://github.com/user-attachments/assets/b8fdd5fb-2b5e-4272-a1c2-fdb9bd35ef43)
+
+
 
 ## Design Suggestions/Thoughts
 
 - Add a loading state for the transactions (maybe a skeleton loader)
 - Add a tooltip for the filter input
 - Better styling for arranging the cards. If there are more than 2 cards, how are they supposed to be displayed?
-- Mobile view styling would be a good to have
+- Mobile view styling design would be a good to have
 
 ## Libraries / Tools Used
 
