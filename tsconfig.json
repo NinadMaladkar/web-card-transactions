@@ -1,12 +1,19 @@
 {
   "compilerOptions": {
-    "noEmit": true,
-    "lib": ["ES2015", "DOM"]
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "resolveJsonModule": true
   },
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
-  "include": ["src/**/*.ts", "src/**/*.vue", "src/types/vuex.d.ts"]
+  "include": ["src/**/*.ts", "src/**/*.vue", "src/types/vuex.d.ts"],
+  "exclude": ["node_modules"]
 }

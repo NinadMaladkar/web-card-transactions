@@ -18,7 +18,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { useStore } from 'vuex';
-import debounce from 'lodash/debounce';
 
 import { State } from '../types/state';
 
@@ -42,7 +41,7 @@ function resetFilter() {
   error.value = '';
 }
 
-const handleInput = (event: InputEvent): void => {
+const handleInput = (event: Event): void => {
   const inputValue = (event.target as HTMLInputElement).value;
   if (inputValue.trim() === '') {
     resetFilter();
@@ -54,12 +53,24 @@ const handleInput = (event: InputEvent): void => {
   debouncedFilterTransactions(inputValue);
 };
 
+const debounce = (func: Function, wait: number) => {
+  let timeout: ReturnType<typeof setTimeout>;
+  return function executedFunction(...args: any[]) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
+
 const debouncedFilterTransactions = debounce(
   async (value: string): Promise<void> => {
     try {
       filterValue.value = value;
       store.commit('setFilterValue', filterValue.value);
-    } catch (error) {
+    } catch (err) {
       error.value = 'Error fetching transactions..';
     } finally {
       loading.value = false;

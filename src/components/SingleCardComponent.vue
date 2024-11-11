@@ -14,7 +14,7 @@
 import { defineEmits } from 'vue';
 import { Card } from '../types/card';
 
-const props = defineProps<{
+defineProps<{
   card: Card;
 }>();
 
