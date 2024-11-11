@@ -11,7 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits } from 'vue';
 import { Card } from '../types/card';
 
 defineProps<{
