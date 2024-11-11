@@ -2,7 +2,6 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { createStore } from 'vuex';
 import SearchComponent from '../src/components/SearchComponent.vue';
-import debounce from 'lodash/debounce';
 import { ComponentPublicInstance } from 'vue';
 
 const store = createStore({
